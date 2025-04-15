@@ -18,7 +18,7 @@ session.execute("""
 session.set_keyspace('search_engine')
 
 session.execute("""
-    CREATE TABLE IF NOT EXISTS term_index (
+    CREATE TABLE IF NOT EXISTS term_freq (
         term TEXT,
         doc_id TEXT,
         tf INT,
@@ -27,7 +27,7 @@ session.execute("""
 """)
 
 session.execute("""
-    CREATE TABLE IF NOT EXISTS vocabulary (
+    CREATE TABLE IF NOT EXISTS doc_dreq (
         term TEXT PRIMARY KEY,
         df INT
     )

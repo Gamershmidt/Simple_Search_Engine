@@ -18,8 +18,8 @@ def load_table(table):
     return spark.read.format("org.apache.spark.sql.cassandra") \
         .options(table=table, keyspace="search_engine").load()
 
-index_df = load_table("term_index")
-vocab_df = load_table("vocabulary")
+index_df = load_table("term_freq")
+vocab_df = load_table("doc_freq")
 doc_stats_df = load_table("doc_stats")
 
 N = doc_stats_df.count()
