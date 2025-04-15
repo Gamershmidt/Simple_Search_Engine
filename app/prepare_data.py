@@ -11,7 +11,7 @@ import shutil
 print("\n\n\n\n\n\ndata preparation!\n\n\n\n\n")
 output_dir = "data"
 os.makedirs(output_dir, exist_ok=True)
-# Configure Spark
+
 spark = SparkSession.builder \
     .appName("data preparation") \
     .config("spark.sql.parquet.enableVectorizedReader", "false") \
