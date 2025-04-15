@@ -27,7 +27,7 @@ spark = SparkSession.builder \
 print("\n\n\n\n\n\nread parquet file!\n\n\n\n\n")
 df = spark.read.parquet("/a.parquet")
 
-n = 10
+n = 110
 df_sample = df.select("id", "title", "text") \
     .filter(col("text").isNotNull()) \
     .filter(col("text") != "") \
